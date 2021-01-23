@@ -1,3 +1,20 @@
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+  apiKey: "AIzaSyAee8xGyT8t1CZNJUC7UmqGi4hFspPuDPk",
+  authDomain: "penn-bucket.firebaseapp.com",
+  projectId: "penn-bucket",
+  storageBucket: "penn-bucket.appspot.com",
+  messagingSenderId: "837280360161",
+  appId: "1:837280360161:web:4cac4ff8517d50d7aaf9a0",
+  measurementId: "G-T3KRXEQWGV",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+var database = firebase.database();
+
 function isEmail(email) {
   // make sure input is string
   if (typeof email !== "string") {
@@ -15,9 +32,10 @@ function submitEmail(e) {
   const email = document.getElementById("email").value;
 
   if (isEmail(email)) {
-    // send email off
+    database.ref("emails/").push().set(email); // append email to list in firebase
+    document.getElementById("email").value = "";
   } else {
-    error;
+    // display error message
   }
 }
 
