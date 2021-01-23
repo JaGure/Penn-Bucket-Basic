@@ -10,12 +10,22 @@
     <div id="container">
       <div id="mainBox">
         <form id="emailSubmitForm">
-          <label for="email"
-            >Want to learn more about Penn Bucket? Add your email to our
-            Listserv!</label
-          > </br>
-          <input type="text" id="email" name="email" required />
-          <input type="submit" value="Sign Me Up!" />
+          <div class="gridBlock" id="messageBox">
+            <label for="email" id="message"
+              >Want to learn more about Penn Bucket? Add your email to our
+              Listserv!</label
+            >
+          </div>
+          <div id="submitBox">
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <input type="submit" id="submitButton" value="Sign Me Up!" />
+          </div>
         </form>
         <p></p>
       </div>
@@ -23,7 +33,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
     <script src="formSubmit.js"></script>
   </body>

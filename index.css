@@ -24,13 +24,96 @@ div {
 #mainBox {
   flex: initial;
   width: 50%;
-  height: 25%;
+  height: 50%;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   background-color: #4da6ff;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #emailSubmitForm {
-  text-align: center;
+  flex: initial;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 85% auto;
+  width: 95%;
+  height: 95%;
+}
+
+#messageBox {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+}
+
+#message {
+  flex: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3.4vw;
+  font-weight: bold;
+  color: white;
+}
+
+#submitBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+#email {
+  flex: auto;
+  margin-right: 5px;
+  text-decoration: none;
+  padding-left: 7px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #e6f2ff;
+  border-radius: 4px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#submitButton {
+  flex: initial;
+  border: none;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  background-color: #a64dff;
+  border-radius: 4px;
+  padding: 0 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 768px) {
+  #mainBox {
+    height: 25%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #mainBox {
+    height: 13%;
+  }
+
+  #emailSubmitForm {
+    grid-template-columns: 12% auto;
+    grid-template-rows: 85% auto;
+  }
+
+  #email,
+  #submitButton {
+    font-size: 8px;
+  }
+
+  #submitButton {
+    padding: 0 5px;
+  }
+
+  #email {
+    width: 100%;
+    padding-left: 3px;
+  }
 }
