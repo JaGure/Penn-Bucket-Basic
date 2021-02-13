@@ -2,34 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Penn Bucket</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
   </head>
   <body>
-    <div id="container">
-      <div id="mainBox">
-        <form id="emailSubmitForm">
-          <div class="gridBlock" id="messageBox">
-            <label for="email" id="message"
-              >Want to learn more about Penn Bucket? Add your email to our
-              Listserv!</label
-            >
+    <section class="hero is-fullheight has-background-info">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-two-thirds is-offset-2">
+              <div class="box has-background-info-light">
+                <h1
+                  class="title is-size-1-desktop is-size-3-mobile as-text-grey-light has-text-weight-bold is-family-sans-serif"
+                >
+                  Want to learn more about Penn Bucket? Add your email to our
+                  Listserv!
+                </h1>
+                <form id="emailSubmitForm">
+                  <div class="field has-addons">
+                    <div class="control">
+                      <input
+                        class="input is-medium"
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                    <div class="control">
+                      <input
+                        class="button is-info is-medium"
+                        type="submit"
+                        id="submitButton"
+                        value="Sign Me Up!"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div id="submitBox">
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
-            <input type="submit" id="submitButton" value="Sign Me Up!" />
-          </div>
-        </form>
-        <p></p>
+        </div>
       </div>
-    </div>
+    </section>
 
     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
