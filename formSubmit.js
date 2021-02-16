@@ -34,7 +34,7 @@ function submitEmail(e) {
   if (isEmail(email)) {
     database.ref("emails/").push().set(email); // append email to list in firebase
     document.getElementById("email").value = ""; // clear input field
-    alert("Success! Thanks for signing up. You'll here from us soon 😜");
+    alert("Success! Thanks for signing up. You'll hear from us soon 😜");
   } else {
     alert("Not a valid email");
   }
